@@ -1,5 +1,5 @@
-FROM cuda:7.0-runtime-centos7
-LABEL maintainer "NVIDIA CORPORATION <cudatools@nvidia.com>"
+FROM louishp/cuda:7.0-runtime-centos7
+LABEL maintainer "Louis <louisxcode@yahoo.com>"
 
 RUN yum install -y \
         cuda-core-$CUDA_PKG_VERSION \
