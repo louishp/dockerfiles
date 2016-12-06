@@ -1,0 +1,11 @@
+FROM louishp/cuda:7.5-devel-ubuntu14.04
+LABEL maintainer "Louis <louisxcode@yahoo.com>"
+
+RUN echo "deb http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1404/x86_64 /" > /etc/apt/sources.list.d/nvidia-ml.list
+
+ENV CUDNN_VERSION 4
+LABEL com.nvidia.cudnn.version="4"
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+            libcudnn4-dev=4.0.8 && \
+    rm -rf /var/lib/apt/lists/*
