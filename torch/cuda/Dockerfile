@@ -1,6 +1,6 @@
 # Start with cuDNN base image
 FROM louishp/cuda:8.0-cudnn5-devel-ubuntu14.04
-MAINTAINER Louis <louisxcode@yahoo.com>
+MAINTAINER Louis
 
 # Install git, apt-add-repository and dependencies for iTorch
 RUN apt-get update && apt-get install -y \
@@ -36,3 +36,11 @@ ENV LUA_CPATH='/root/torch/install/lib/?.so;'$LUA_CPATH
 
 # Set ~/torch as working directory
 WORKDIR /root/torch
+
+# Restore Torch7 installation script
+RUN sed -i 's/path_to_nvcc=$(which no_nvcc)/path_to_nvcc=$(which nvcc)/g' install.sh
+
+# Install CUDA libraries
+RUN luarocks install cutorch && \
+    luarocks install cunn && \
+    luarocks install cudnn
