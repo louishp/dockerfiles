@@ -1,5 +1,5 @@
-FROM ubuntu:14.04
-MAINTAINER lyysdy@foxmail.com
+FROM louishp/ubuntu:16.04-sudo
+MAINTAINER louis
 
 USER root
 
