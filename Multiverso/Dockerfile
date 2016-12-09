@@ -101,13 +101,13 @@ RUN cd /dmtk/multiverso/binding/lua \
 
 # run cpp tests
 # RUN cd /dmtk/multiverso/build \
-   && mpirun -np 4 ./Test/multiverso.test kv \
-   && mpirun -np 4 ./Test/multiverso.test array \
-   && mpirun -np 4 ./Test/multiverso.test net \
-   && mpirun -np 4 ./Test/multiverso.test ip \
-   && mpirun -np 4 ./Test/multiverso.test checkpoint \
-   && mpirun -np 4 ./Test/multiverso.test restore \
-   && mpirun -np 4 ./Test/multiverso.test allreduce
+#   && mpirun -np 4 ./Test/multiverso.test kv \
+#   && mpirun -np 4 ./Test/multiverso.test array \
+#   && mpirun -np 4 ./Test/multiverso.test net \
+#   && mpirun -np 4 ./Test/multiverso.test ip \
+#   && mpirun -np 4 ./Test/multiverso.test checkpoint \
+#   && mpirun -np 4 ./Test/multiverso.test restore \
+#   && mpirun -np 4 ./Test/multiverso.test allreduce
 # - mpirun -np 4 ./Test/multiverso.test matrix  # TODO the matrix test won't stop
 # - mpirun -np 4 ./Test/multiverso.test TestSparsePerf # TODO TestSparsePerf takes too much time
 # - mpirun -np 4 ./Test/multiverso.test TestDensePerf # TODO TestDensePerf takes too much time
