@@ -1,11 +1,12 @@
 FROM ubuntu:14.04
 
-MAINTAINER Craig Citro <craigcitro@google.com>
+MAINTAINER louis
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         build-essential \
         curl \
         git \
+        swig \
         libcurl3-dev \
         libfreetype6-dev \
         libpng12-dev \
