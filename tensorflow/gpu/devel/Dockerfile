@@ -1,6 +1,6 @@
 FROM louishp/cuda:8.0-cudnn5-devel-ubuntu14.04
 
-MAINTAINER Craig Citro <craigcitro@google.com>
+MAINTAINER louis
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         build-essential \
