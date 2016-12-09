@@ -4,36 +4,36 @@ MAINTAINER louis
 USER root
 
 # install dev tools
-RUN apt-get update \
-    && apt-get install -qqy \
+RRUN apt-get update
+RUN apt-get install -y \
        curl \
        tar \
-       g++-4.8 \
-       gcc \
-       libtool \
-       pkg-config \
-       autoconf \
-       openssh-server \
-       openssh-client \
-       rsync \
        build-essential \
        automake \
        vim \
        gdb \
        git \
+       g++-4.8 \
+       gcc \
+       libtool \
+       pkg-config \
+       autoconf \
+       unzip
+RUN apt-get install -y \
+       openssh-server \
+       openssh-client \
+       rsync \
        libopenmpi-dev \
        openmpi-bin \
        cmake \
        gfortran \
+       libboost-all-dev
+RUN apt-get install -y \
        python-nose \
        python-numpy \
        python-scipy \
        python-dev \
        python-pip \
-       libopenblas-dev \
-       software-properties-common \
-       libssl-dev \
-       libzmq3-dev \
        python-zmq 
 
 # java
@@ -100,7 +100,7 @@ RUN cd /dmtk/multiverso/binding/lua \
 	&& make test
 
 # run cpp tests
-RUN cd /dmtk/multiverso/build \
+# RUN cd /dmtk/multiverso/build \
    && mpirun -np 4 ./Test/multiverso.test kv \
    && mpirun -np 4 ./Test/multiverso.test array \
    && mpirun -np 4 ./Test/multiverso.test net \
