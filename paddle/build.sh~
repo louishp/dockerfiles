@@ -21,7 +21,7 @@ if [ ${WITH_GPU} == 'ON' ]; then
 fi
 
 cd ~
-git clone https://github.com/PaddlePaddle/Paddle.git paddle --recursive
+git clone --recursive paddle --recursive
 cd paddle
 mkdir build
 cd build
