@@ -8,6 +8,7 @@ RUN wget http://mirror.bit.edu.cn/apache/maven/maven-3/3.3.9/binaries/apache-mav
 RUN wget http://javadl.oracle.com/webapps/download/AutoDL?BundleId=216424
 #COPY jdk-8u111-linux-x64.tar.gz /
 
+RUN mv AutoDL?BundleId=216424 jdk-8u112-linux-x64.tar.gz 
 RUN tar -zxf jdk-8u112-linux-x64.tar.gz
 RUN tar -zxf apache-maven-3.3.9-bin.tar.gz
 
