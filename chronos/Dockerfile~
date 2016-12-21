@@ -5,7 +5,7 @@ RUN yum install -y git make wget tar
 
 RUN wget http://mirror.bit.edu.cn/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
 #COPY apache-maven-3.3.9-bin.tar.gz /
-RUN wget http://javadl.oracle.com/webapps/download/AutoDL?BundleId=216424
+RUN wget http://download.oracle.com/otn-pub/java/jdk/8u112-b15/jdk-8u112-linux-x64.tar.gz
 #COPY jdk-8u111-linux-x64.tar.gz /
 
 RUN tar -zxf jdk-8u112-linux-x64.tar.gz
