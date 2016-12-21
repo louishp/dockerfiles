@@ -9,7 +9,7 @@ RUN wget http://download.oracle.com/otn-pub/java/jdk/8u111-b14/jdk-8u111-linux-x
 #COPY jdk-8u111-linux-x64.tar.gz /
 
 RUN mv jdk-8u111-linux-x64.tar.gz jdk-8u111-linux-x64.tar
-RUN tar -zxf jdk-8u111-linux-x64.tar.gz
+RUN tar -zxf jdk-8u111-linux-x64.tar
 RUN tar -zxf apache-maven-3.3.9-bin.tar.gz
 
 ENV JAVA_HOME /jdk1.8.0_111
